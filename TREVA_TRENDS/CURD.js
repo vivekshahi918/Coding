@@ -17,6 +17,10 @@ export default async function handler(req, res){
                 const productcreate = await Product.create(req.body);
                 res.status(201).json(productcreate);
                 break;
+
+                //this is equivalent to this 
+                // const product = new Product({ ...req.body }); //(....) is the spread operator, it takes all the properties from req.body and adds them to the new product object
+                // await product.save();
                 
             case 'PUT':
                 const productupdate = await Product.findByIdAndUpdate(req.query.id, req.body, {new: true});
