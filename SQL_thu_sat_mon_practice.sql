@@ -46,7 +46,7 @@ SELECT * FROM employess
 Where first_name LIKE 'A_____%';
 
 SELECT first_name, salary from employees
-ORDER BY salary DESC,
+ORDER BY salary DESC
 LIMIT 3;
 
 -- [HAVING Clause] Write a query to find all dept_ids where the total salary spent on employees is greater than $200,000.
@@ -57,7 +57,7 @@ HAVING SUM(salary) > 200000;
 -- [Subquery] Write a query to find all employees who earn more than the average salary of the entire company.
 SELECT * 
 FROM employees
-WHERE salary> (SELECT AVG(salary)
+WHERE salary > (SELECT AVG(salary)
 from employees);
 
 
