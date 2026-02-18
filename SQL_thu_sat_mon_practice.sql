@@ -65,7 +65,7 @@ from employees);
 -- -- 
 SELECT d.dept_name , 
 Count(e.emp_id) AS total_employees
-FROM department d
+FROM departments d
 LEFT JOIN employees e ON e.dept_id = d.dept_id;
 GROUP BY d.dept_name;
 
